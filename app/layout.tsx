@@ -3,6 +3,7 @@ import { getServerSession } from 'next-auth'
 import { SessionProvider } from '@component/components/SessionProvider'
 import './globals.css'
 import { authOptions } from "./api/auth/[...nextauth]"
+import Login from '@component/components/Login'
 
 export default async function RootLayout({
   children,
@@ -17,6 +18,11 @@ export default async function RootLayout({
       <head />
       <body>
         <SessionProvider session={session}>
+          {!session ? (
+            <Login />
+          ) : (
+            
+          
         <div className="flex">
           {/* Sidebar */}
           <div className="bg-[#202123] max-w-xs h-screen overflow-y-scroll
@@ -29,6 +35,7 @@ export default async function RootLayout({
           {children}
           </div>
         </div>
+        )}
         </SessionProvider>
         </body>
     </html>
