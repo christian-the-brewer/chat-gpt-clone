@@ -5,14 +5,18 @@ import Logo from '@component/public/chatgptlogo.png'
 
 function Login() {
     return (
-        <div>
+        <div className='bg-[#11a37f] h-screen flex flex-col items-center
+        justify-center text-center'>
             <Image 
                 src={Logo}
                 width={300}
                 height={300}
                 alt='logo'
             />
-            <button>Sign In to use ChatGPT</button>
+            <button onClick={() => signIn('google')} 
+            className='text-white font-bold text-3xl animate-pulse'>
+                Sign In to use ChatGPT
+                </button>
         </div>
     )
 }
