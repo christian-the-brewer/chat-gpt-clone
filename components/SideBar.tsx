@@ -14,7 +14,7 @@ function Sidebar () {
         session && collection(db, 'users', session.user?.email!, 'chats')
     )
 
-
+        console.log(chats)
     return (
         <div className="p-2 flex flex-col h-screen">
             <div className="flex-1">
