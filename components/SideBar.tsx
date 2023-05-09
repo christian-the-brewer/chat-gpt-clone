@@ -21,16 +21,16 @@ function Sidebar() {
             <div className="flex-1">
                 <div>
                     <NewChat />
-                    <div>
-                        {/* ModelSelect */}
-                    </div>
-                    {/* Map through chats */}
-                    {chats?.docs.map((chat) => {
+
+                    <div>{/* ModelSelect */}</div>
+                   
+                   {/* ModelSelect */}
+                    {chats?.docs.map(chat => (
                         <ChatRow key={chat.id} id={chat.id} />
-                    })}
+                    ))}
                 </div>
             </div>
-            <div>
+            
                 {session && (
                     <img
                         onClick={() => signOut()}
@@ -39,7 +39,7 @@ function Sidebar() {
                         className='h-12 w-12 rounded-full cursor-pointer mx-auto mb-2 hover:opacity-50'
                     />
                 )}
-            </div>
+            
         </div>
     )
 }
