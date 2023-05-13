@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import query from "@component/lib/queryApi";
 
 type Data = {
     answer: string
@@ -19,6 +20,8 @@ export default async function handler(
         res.status(400).json({answer: 'Please enter a chat ID.'})
         return
     }
+
+    const response = await query(prompt, chatId, model)
 
     res.status(200).json({answer: 'Me'})
 }
