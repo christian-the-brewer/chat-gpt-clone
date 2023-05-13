@@ -4,6 +4,7 @@ import { SessionProvider } from '@component/components/SessionProvider'
 import './globals.css'
 import { authOptions } from '@component/pages/api/auth/[...nextauth]'
 import Login from '@component/components/Login'
+import ClientProvider from "@component/components/ClientProvider"
 
 export default async function RootLayout({
   children,
@@ -31,7 +32,8 @@ export default async function RootLayout({
           md:min-w-[20rem]">
             <Sidebar />
           </div>
-          {/* Sidebar */}
+          {/* client provider*/}
+          <ClientProvider />
           
         <div className="bg-[#343541] flex-1" >
           {children}
