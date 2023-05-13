@@ -51,6 +51,7 @@ function ChatInput({ chatId }: Props) {
             })
         }).then(() => {
             //success toast notification
+            console.log(`Message: ${message}`)
             toast.success('Christian has responded!', {
                 id: notification
             })
