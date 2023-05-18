@@ -10,7 +10,7 @@ import ChatRow from './ChatRow'
 function Sidebar() {
 
     const { data: session } = useSession()
-    console.log(session)
+    // console.log(session)
 
     const [chats, loading, error] = useCollection(
         session && query(collection(db, 'users', session.user?.email!, 'chats'), orderBy("createdAt", "asc")

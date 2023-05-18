@@ -48,10 +48,10 @@ function ChatInput({ chatId }: Props) {
             },
             body: JSON.stringify({
                 prompt:input, chatId, model, session
-            })
+            }),
         }).then(() => {
             //success toast notification
-            console.log(`Message: ${message}`)
+            console.log(`Message: ${message.text}`)
             toast.success('Christian has responded!', {
                 id: notification
             })

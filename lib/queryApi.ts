@@ -10,6 +10,7 @@ const query = async (prompt: string, chatId: string, model: string) => {
         frequency_penalty: 0,
         presence_penalty: 0,
     }).then(res => res.data.choices[0].text).catch((err) => `Christian was unable to answer. (Error: ${err.message})`)
+    console.log({res:res})
     return res
 }
 
