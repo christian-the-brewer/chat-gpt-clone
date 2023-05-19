@@ -7,10 +7,10 @@ type Props = {
 
 function Message({ message }: Props) {
 
-    const isChatGPT = message.user.name === 'ChatGPT'
+    const isChristianGPT = (message.user.name === 'ChristianGPT')
 
   return (
-    <div className={`py-5 text-white ${isChatGPT && 'bg-[#434654]'}`}>
+    <div className={`py-5 text-white ${isChristianGPT && 'bg-[#434654]'}`}>
         <div className="flex space-x-5 px-10 max-w-2xl mx-auto">
             <img src={message.user.avatar}
             alt={`${message.user.name} profile picture`}
