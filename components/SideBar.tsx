@@ -11,7 +11,7 @@ import ModelSelection from './ModelSelection'
 function Sidebar() {
 
     const { data: session } = useSession()
-    // console.log(session)
+   
 
     const [chats, loading, error] = useCollection(
         session && query(collection(db, 'users', session.user?.email!, 'chats'), orderBy("createdAt", "asc")
@@ -28,11 +28,19 @@ function Sidebar() {
                     <div className='hidden sm:inline'>
                         <ModelSelection />
                     </div>
-                   
-                   {/* ModelSelect */}
+                   <div className='flex flex-col space-y-2 my-2'>
+
+                        {loading && (
+                            <div className='animate-pulse text-center text-white'>
+                                <p>Chats are Loading...</p>
+                            </div>
+                        )}
+
+                   {/* chat map */}
                     {chats?.docs.map(chat => (
                         <ChatRow key={chat.id} id={chat.id} />
                     ))}
+                    </div>
                 </div>
             </div>
             
