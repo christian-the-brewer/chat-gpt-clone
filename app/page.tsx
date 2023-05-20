@@ -11,9 +11,9 @@ export default function Home() {
             <h2>Let Christian Google that for you!</h2>
           </div>
           <div className="space-y-2">
-            <p className="infoText">"Explain something to me"</p>
-            <p className="infoText">"What is the difference between a dog and a cat?"</p>
-            <p className="infoText">"What is the color of the sun?"</p>
+            <p className="infoText">Explain something to me</p>
+            <p className="infoText">What is the difference between a dog and a cat?</p>
+            <p className="infoText">What is the color of the sun?</p>
           </div>
         </div>
         
@@ -23,9 +23,9 @@ export default function Home() {
             <h2>Capabilities</h2>
           </div>
           <div className="space-y-2">
-            <p className="infoText">"Adaptable Language Model"</p>
-            <p className="infoText">"Utilizes Firebase storage"</p>
-            <p className="infoText">"Built with Nextjs 13!"</p>
+            <p className="infoText">Adaptable Language Model</p>
+            <p className="infoText">Utilizes Firebase storage</p>
+            <p className="infoText">Built with Nextjs 13!</p>
           </div>
         </div>
         
@@ -35,9 +35,9 @@ export default function Home() {
             <h2>Limitations</h2>
           </div>
           <div className="space-y-2">
-            <p className="infoText">"May give the wrong answer"</p>
-            <p className="infoText">"It is a machine"</p>
-            <p className="infoText">"Limited understanding of world after 2021"</p>
+            <p className="infoText">May give the wrong answer</p>
+            <p className="infoText">It is a machine</p>
+            <p className="infoText">Limited understanding of world after 2021</p>
           </div>
         </div>
         
